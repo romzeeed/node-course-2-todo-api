@@ -50,6 +50,3 @@ describe('POST /todos', () => {
             });     
     });    
 });
-
-
-//expect 400
