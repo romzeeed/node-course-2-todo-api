@@ -31,13 +31,6 @@ const {User} = require('./../server/models/user');
 
 
 
-
-//query users collections (grab id from my user document)
-//load user mongoose model
-// User.findById   handle three cases: query works, but no user
-// user was found (print his name), and handle error
-//no need to use isValid. 
-
 var userId = '5b892b513395dc6f995c7814';
 
 User.findById(userId).then((user) => {
