@@ -54,12 +54,12 @@ var id = req.params.id;
         return res.status(404).send();
     }
 
-    Todo.findByIdAndRemove(id).then((result) => {
-        if (!result) {
+    Todo.findByIdAndRemove(id).then((todo) => {
+        if (!todo) {
             res.status(404).send();
         } 
         
-        res.send(result);
+        res.send({todo});
     }).catch((e) => {
         res.status(400).send();
     });
